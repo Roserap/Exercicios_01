@@ -1,1 +1,26 @@
+"""3. Dicionário de Tradução
+Crie um dicionário que contenha algumas palavras em português como chave e
+suas respectivas traduções para inglês como valor. Permita que o usuário digite
+uma palavra em português e retorne sua tradução. Caso a palavra não esteja no
+dicionário, exiba uma mensagem informando que a tradução não foi encontrada."""
 
+dicionario_traducao = {
+    "cachorro": "dog",
+    "gato": "cat",
+    "casa": "house",
+    "carro": "car",
+    "livro": "book",
+    "escola": "school",
+    "maçã": "apple",
+    "computador": "computer",
+    "telefone": "phone",
+    "mesa": "table"
+}
+
+palavra_portugues = input("Digite uma palavra em português para traduzir para o inglês: ").strip().lower()
+
+if palavra_portugues in dicionario_traducao:
+    traducao = dicionario_traducao[palavra_portugues]
+    print(f"A tradução de '{palavra_portugues}' para o inglês é: '{traducao}'")
+else:
+    print(f"A tradução da palavra '{palavra_portugues}' não foi encontrada.")
