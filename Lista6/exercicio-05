@@ -1,1 +1,41 @@
+"""5. Classificação de Times de Futebol
+Crie uma tupla contendo os 10 primeiros colocados de um campeonato de
+futebol. Depois, exiba:
+• Os três primeiros colocados.
+• Os últimos três colocados.
+• Os times em ordem alfabética.
+• A posição de um time específico informado pelo usuário."""
 
+times = (
+    "Flamengo",
+    "Palmeiras",
+    "São Paulo",
+    "Bangu",
+    "Boa Vista",
+    "Grêmio",
+    "Barreira",
+    "Atlético Mineiro",
+    "Vasco",
+    "Botafogo"
+)
+
+print("Três primeiros colocados:")
+for i in range(3):
+    print(f"{i + 1}º lugar: {times[i]}")
+
+print("\nÚltimos três colocados:")
+for i in range(7, 10):
+    print(f"{i + 1}º lugar: {times[i]}")
+
+print("\nTimes em ordem alfabética:")
+times_alfabeticos = sorted(times)
+for time in times_alfabeticos:
+    print(time)
+
+time_especifico = input("\nDigite o nome de um time para saber sua posição: ")
+
+if time_especifico in times:
+    posicao = times.index(time_especifico) + 1
+    print(f"O time {time_especifico} está na {posicao}ª posição.")
+else:
+    print(f"O time {time_especifico} não está entre os 10 primeiros colocados.")
