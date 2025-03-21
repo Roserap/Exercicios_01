@@ -1,1 +1,27 @@
+"""2. Operações Matemáticas com Números em uma Tupla
+Solicite ao usuário quatro números inteiros e armazene-os em uma tupla. Em
+seguida, exiba:
+• Quantas vezes o número 9 apareceu na tupla.
+• Em que posição foi digitado o primeiro número 3 (caso exista).
+• Os números pares contidos na tupla."""
 
+numeros = []
+for i in range(4):
+    numero = int(input(f"Digite o {i + 1}º número inteiro: "))
+    numeros.append(numero)
+
+tupla_numeros = tuple(numeros)
+
+contagem_nove = tupla_numeros.count(9)
+
+posicao_tres = tupla_numeros.index(3) if 3 in tupla_numeros else -1
+
+numeros_pares = [num for num in tupla_numeros if num % 2 == 0]
+
+print("\nResultados:")
+print(f"Quantas vezes o número 9 apareceu: {contagem_nove} vez(es)")
+if posicao_tres != -1:
+    print(f"O primeiro número 3 foi digitado na posição: {posicao_tres}")
+else:
+    print("O número 3 não foi digitado.")
+print(f"Números pares na tupla: {numeros_pares}")
