@@ -1,17 +1,13 @@
-"""1. Cadastro de Alunos
-Crie um programa que permita cadastrar alunos em um dicionário. O programa
-deve solicitar o nome e a nota do aluno e armazená-los como chave e valor no
-dicionário. Após a inserção de pelo menos 3 alunos, exiba a lista de alunos e suas
-respectivas notas."""
+"""1. Armazenamento de Informações de um Produto
+Crie um programa que utilize uma tupla para armazenar as informações de um
+produto: nome, preço e quantidade em estoque. Em seguida, exiba os dados do
+produto formatados."""
 
-alunos = {}
+produto = ("Camiseta", 29.30, 80)
 
-while len(alunos) < 3:
-    nome = input("Digite o nome do aluno: ")
-    nota = float(input("Digite a nota do aluno: "))
-    
-    alunos[nome] = nota
+nome, preco, quantidade = produto
 
-print("\nLista de Alunos e suas Notas:")
-for nome, nota in alunos.items():
-    print(f"Aluno: {nome}, Nota: {nota:.1f}")
+print("Informações do Produto:")
+print(f"Nome: {nome}")
+print(f"Preço: R$ {preco:.2f}")
+print(f"Quantidade em Estoque: {quantidade} unidades")
